@@ -20,7 +20,7 @@ jobs:
       run: ./gradlew setup
     - name: Run Bulid Iris plugin
       run: ./gradlew iris
-    - name: Release Leaf
+    - name: Release Iris
       if: github.event_name != 'pull_request'
       uses: marvinpinto/action-automatic-releases@master
       with:
