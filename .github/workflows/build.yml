@@ -20,3 +20,12 @@ jobs:
       run: ./gradlew setup
     - name: Run Bulid Iris plugin
       run: ./gradlew iris
+    - name: Release Leaf
+        if: github.event_name != 'pull_request'
+        uses: marvinpinto/action-automatic-releases@master
+        with:
+          title: "Iris build"
+          automatic_release_tag: "build"
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          files: "./Iris-*.jar"
+          prerelease: false
