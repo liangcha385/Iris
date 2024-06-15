@@ -19,4 +19,4 @@ jobs:
     - name: Run setup with mc 1.18+
       run: ./gradlew setup
     - name: Run Bulid Iris plugin
-      run: ./gradle iris
+      run: ./gradlew iris
