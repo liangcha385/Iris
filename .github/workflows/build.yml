@@ -18,7 +18,7 @@ jobs:
       uses: gradle/gradle-build-action@v2
     - name: Run setup with mc 1.18+
       run: ./gradlew setup
-    - name: Run Bulid Iris plugin
+    - name: Run bulid Iris plugin
       run: ./gradlew iris
     - name: Release Iris
       if: github.event_name != 'pull_request'
